@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <TextView
+        android:id="@+id/tvAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="10.04"
+        android:text="App Name"
+        android:textAlignment="viewStart"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvBlockCount"
+        android:layout_width="72dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="0dp"
+        android:text="Block Count"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvMinutesCount"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="0dp"
+        android:text="Minutes Count"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvLaunchCount"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:text="Launch Count"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+</LinearLayout>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.team9.focus">
+
+    <uses-permission xmlns:tools="http://schemas.android.com/tools"
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <application
+        android:name=".Main"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider android:authorities="com.facebook.app.FacebookContentProvider1778288615562590"
+                  android:name="com.facebook.FacebookContentProvider"
+                  android:exported="true"/>
+
+        <receiver
+            android:name=".BackgroundServices.ScheduleListener"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".BackgroundServices.BlockedNotificationListener"
+            android:label="@string/service_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".BackgroundServices.WindowChangeDetectingService"
+            android:label="WindowChangeDetectingService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibilityservice" />
+        </service>
+
+        <activity
+            android:name=".activities.CreateProfileActivity"
+            android:label="@string/title_activity_create_profile"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.EditProfileActivity"
+            android:label="@string/title_activity_edit_profile"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activities.CreateScheduleActivity"
+            android:label="@string/title_activity_create_schedule"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activities.EditScheduleActivity" />
+        <activity android:name=".activities.CreateCalendarActivity" />
+        <activity
+            android:name=".activities.CreateTimeslotActivity"
+            android:label="@string/title_activity_create_timeslot"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activities.DayViewActivity" />
+        <activity android:name=".activities.WeekViewActivity" />
+        <activity android:name=".activities.UserProfileActivity"></activity>
+        <activity
+            android:name=".activities.ViewStatActivity"
+            android:label="ViewStatActivity"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".activities.ViewBadgeActivity" />
+        <activity
+            android:name=".activities.VisualizeStatsActivity"
+            android:label="@string/title_activity_visualize_stats"
+            android:theme="@style/AppTheme"></activity>
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+                   android:value="@string/facebook_app_id"/>
+        <activity android:name="com.facebook.FacebookActivity"
+                  android:configChanges=
+                      "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+                  android:label="@string/app_name" />
+
+
+
+    </application>
+
+</manifest>

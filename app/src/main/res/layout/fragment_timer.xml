@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:text="Choose Profiles"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:id="@+id/scrollViewProfiles"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView5"
+        android:padding="15dp"
+        android:scrollbarStyle="insideInset">
+
+        <ListView
+            android:id="@+id/profileListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView5"
+            android:layout_weight="1"
+            android:layout_centerHorizontal="true" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:id="@+id/linearLayout"
+        android:layout_above="@+id/timerStart"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/hoursPicker"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="19dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="Set Timer Length"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="131dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <NumberPicker
+                android:id="@+id/hoursPicker"
+                android:layout_width="179dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/timerStart"
+                android:layout_alignStart="@+id/textView5" />
+
+            <NumberPicker
+                android:id="@+id/minutesPicker"
+                android:layout_width="152dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/hoursPicker"
+                android:layout_alignBottom="@+id/hoursPicker"
+                android:layout_alignEnd="@+id/textView6"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/timerStart"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="25dp"
+        android:paddingRight="25dp"
+        android:text="Set Timer" />
+
+
+</RelativeLayout>

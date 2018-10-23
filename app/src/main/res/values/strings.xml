@@ -1,0 +1,23 @@
+<resources>
+
+    <string name="app_name">Focus</string>
+    <string-array name="navigation_drawer_items_array">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>Schedule</item>
+        <item>Timer</item>
+        <item>Calendar</item>
+    </string-array>
+
+    <string name="facebook_app_id">1778288615562590</string>
+    <string name="fb_login_protocol_scheme">fb1778288615562590</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="service_name"> BlockedNotificationListener </string>
+    <string name="title_activity_create_profile">CreateProfileActivity</string>
+    <string name="title_activity_edit_profile">EditProfileActivity</string>
+    <string name="title_activity_create_timeslot">CreateTimeslotActivity</string>
+    <string name="title_activity_create_schedule">CreateScheduleActivity</string>
+    <string name="title_activity_visualize_stats">VisualizeStatsActivity</string>
+</resources>
